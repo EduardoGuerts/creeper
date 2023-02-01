@@ -22,6 +22,21 @@
     <main>
         <canvas id="creeper" width="600" height="600"></canvas>
     </main>
-    
+    <script>
+        // Obtém a referência ao canvas
+        var canvas = document.getElementById("creeper");
+        var ctx = canvas.getContext("2d");
+
+        // Dimensões do canvas
+        var canvasWidth = canvas.width;
+        var canvasHeight = canvas.height;
+
+        // Cores
+        var spaceColor = "lightgrey";
+        var creeperColor = "green";
+        var eyeColor = "black";
+        var noseColor = "black";
+        var mouthColor = "black";
+    </script>
 </body>
 </html>

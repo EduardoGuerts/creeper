@@ -4,85 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minecraft Creeper</title>
+    <link rel="stylesheet" href="../creeper/src/css/style.css">
+    <title>Creeper Minecraft</title>
 </head>
-    <style>
-        body {
-            background-color: black;
-        }
-        main {
-            text-align: center;
-        }
-        #creeper {
-          display: block;
-          margin: 0 auto;
-        }
-    </style>
-<body>
-    <main>
-        <canvas id="creeper" width="600" height="600"></canvas>
-    </main>
-    <script>
-        // Obtém a referência ao canvas
-        var canvas = document.getElementById("creeper");
-        var ctx = canvas.getContext("2d");
-
-        // Dimensões do canvas
-        var canvasWidth = canvas.width;
-        var canvasHeight = canvas.height;
-
-        // Cores
-        var spaceColor = "lightgrey";
-        var creeperColor = "green";
-        var eyeColor = "black";
-        var noseColor = "black";
-        var mouthColor = "black";
-
-        // Desenha o espaço
-        function drawSpace() {
-            ctx.fillStyle = spaceColor;
-            ctx.fillRect(0, 0, canvasWidth, canvasHeight);
-        }
-
-        // Desenha a cabeça do Creeper
-        function drawHead() {
-            ctx.fillStyle = creeperColor;
-            ctx.fillRect(125, 50, 350, 300);
-        }
-
-        // Desenha um olho do Creeper
-        function drawEye(x, y) {
-            ctx.fillStyle = eyeColor;
-            ctx.fillRect(x, y, 90, 90);
-        }
-
-        // Desenha o nariz do Creeper
-        function drawNose() {
-            ctx.fillStyle = "black";
-            ctx.fillRect(265, 190, 70, 100);
-        }
-
-
-        // Desenha a boca do Creeper
-        function drawMouth(x, y) {
-            ctx.fillStyle = mouthColor;
-            ctx.fillRect(x, y, 40, 110);
-        }
-
-        // Desenha o corpo do Creeper
-        function drawBody() {
-            ctx.fillStyle = "green";
-            ctx.fillRect(200, 350, 200, 200);
-        }
-        
-        drawSpace();
-        drawHead();
-        drawEye(175, 100);
-        drawEye(335, 100);
-        drawNose();
-        drawMouth(225, 240);
-        drawMouth(335, 240);
-        drawBody();
-    </script>
-</body>
+    <body>
+        <canvas id="canvas" width="480" height="640"></canvas>
+        <script src=".//src/js/desenho.js" ></script>
+    </body>
 </html>
